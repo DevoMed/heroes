@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-content>
+      <form #loginForm="ngForm" >
+        <h2>Log In</h2>
+        <mat-error *ngIf="!loginValid">
+          El usuario y/o la contraseña no son válidos
+        </mat-error>
+        <mat-form-field>
+          <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+          <mat-error>
+            Introduzca un email válido
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+          <mat-error>
+            Introduzca una contraseña
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid" (click)="login()">Iniciar sesión</button>
+        <button mat-raised-button color="primary" style="margin-left: 40px;" (click)="registrate()">Registrate</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+ 

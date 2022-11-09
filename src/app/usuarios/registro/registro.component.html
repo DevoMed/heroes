@@ -1,0 +1,22 @@
+<mat-card>
+    <h1>Registro de nuevos usuarios</h1>
+    <mat-card-content>
+        <form class="my-form"  #loginForm="ngForm">
+            <mat-form-field class="full-width">
+                <mat-label>Usuario</mat-label>
+                <input matInput placeholder="usuario" name="usuario" [(ngModel)]="usuario.usuario" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" name="email" [(ngModel)]="usuario.email" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" name="password" [(ngModel)]="usuario.password" required>
+            </mat-form-field>
+        </form>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid" (click)="agregar()">registrate</button>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>

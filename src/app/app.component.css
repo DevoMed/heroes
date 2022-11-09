@@ -1,0 +1,12 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.contenedor {
+    margin: 40px;
+}
+
+.sidenav-toolbar {
+    min-width: 180px;
+    cursor: pointer;
+}

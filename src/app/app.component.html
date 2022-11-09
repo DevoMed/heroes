@@ -1,0 +1,58 @@
+
+<mat-sidenav-container fullscreen>
+
+    <!-- <mat-sidenav #sidenav [mode]="'push'"> -->
+    <mat-sidenav #sidenav>
+
+        <mat-toolbar color="primary" class="sidenav-toolbar" (click)="sidenav.toggle()">
+
+            <span class="spacer"></span>
+            <mat-icon>arrow_back_ios</mat-icon>
+
+        </mat-toolbar>
+
+        <mat-nav-list class="sidenav-nav-list">
+
+            <mat-list-item routerLink="../heroes/componentes/listado" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>list</mat-icon>
+                Listado
+            </mat-list-item>
+
+            <mat-list-item routerLink="../heroes/componentes/alta" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                Alta
+            </mat-list-item>
+
+            <mat-list-item routerLink="../heroes/componentes/buscar" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>search</mat-icon>
+                Buscar
+            </mat-list-item>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <mat-toolbar color="primary">
+
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <span class="spacer"></span>
+
+            <button mat-stroked-button routerLink="../usuarios/login">
+                Inciar sesión
+            </button>
+
+        </mat-toolbar>
+
+        <div class="contenedor">
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+

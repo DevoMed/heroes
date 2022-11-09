@@ -1,0 +1,22 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  .spacer {
+    flex: 1 1 auto;
+}
+
+.contenedor {
+    margin: 40px;
+}
+
+.sidenav-toolbar {
+    min-width: 180px;
+    cursor: pointer;
+}
+
